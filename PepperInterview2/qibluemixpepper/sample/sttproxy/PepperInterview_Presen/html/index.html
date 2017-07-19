@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="initial-scale = 1, minimum-scale = 1, maximum-scale = 1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="stylesheets/reset.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+    <script src="/libs/qimessaging/1.0/jquery.min.js"></script>
+    <script src="/libs/qimessaging/1.0/socket.io.min.js"></script>
+    <script src="/libs/qimessaging/1.0/qimessaging.js"></script>
+	<script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+	<script src="scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="scripts/apng-canvas.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.qimhelpers.js"></script>
+    <script type="text/javascript" src="scripts/camera.js"></script>
+    <script type="text/javascript" src="scripts/yuv422.js"></script>
+    <script type="text/javascript" src="scripts/interview.js"></script>
+    <script type="text/javascript" src="scripts/interview_timer.js"></script>
+	<script type="text/javascript" src="scripts/change_text.js"></script>
+	<script type="text/javascript" src="scripts/status_bar.js"></script>
+<body>
+<div id="wrap">
+	<div class="welcome">
+		<div class="solitary">
+			<img src="images/circle_image.png" class="apng-image circle_img" width="480" height="480">
+			<img src="images/solitary_title.png" class="title">
+		</div>
+		<div class="qr_guide">
+			<img src="images/qr_guide.png">
+			<div class="txt"><p>スマートフォンにエントリー用のQRコードを表示させ<br>私に見せてください</p></div>
+		</div>
+		<div class="qr_read">
+			<img src="images/qr_read.png">
+			<div class="qr_area" id="preview_canvas">
+				<canvas id="camera"></canvas>
+			</div>
+			<div class="txt">QRコード読取り中</div>
+		</div>
+		<div class="user_info">
+			<dl>
+				<dt>ユーザーID</dt><dd id="setUserID"></dd>
+				<dt>お名前</dt><dd id="setUserName"></dd>
+				<dt>生年月日</dt>
+				<dd>
+					<span id="setUserBirthY"></span><small>年</small>
+					<span id="setUserBirthM"></span><small>月</small>
+					<span id="setUserBirthD"></span><small>日</small>
+				</dd>
+			</dl>
+			<div class="btn_wite btn1"><p>再度読取る</p></div>
+			<div class="btn_color btn2"><p>OK</p></div>
+			<footer><p>サポートセンター<img src="images/tel_icon.png">03-1234-5678</p></footer>
+		</div>
+		<div class="W05">
+			<p>面接の進め方について<br>ご説明いたします</p>
+		</div>
+	</div>
+	<div class="tutorial">
+		<header class="t_head_bg"></header>
+
+		<div class="T02">
+			<header class="t_head_title"><p>確認事項</p></header>
+			<img src="images/privacymark.png">
+			<dl>
+				<dt>個人情報の取扱いについて</dt>
+				<dd>撮影した動画データや取得した個人情報(以下、｢個人情報｣という)は、<br>資質診断の目的以外には利用いたしません。<br>また、取得した個人情報は法令に基づく場合を除き、<br>本人の同意なく第三者への提供はいたしません。</dd>
+			</dl>
+		</div>
+
+		<div class="T03">
+			<header class="t_head_title"><p>注意事項</p></header>
+			<ul>
+				<li>
+					<img src="images/t03_no1.png">
+					<p>開始から終了まで60〜90分ほどを予定</p>
+				</li>
+				<li>
+					<img src="images/t03_no2.png">
+					<p>原則として、中断や途中退室は不可</p>
+				</li>
+				<li>
+					<img src="images/t03_no3.png">
+					<p>｢一時中断｣ボタンをタッチして終了することができる</p>
+				</li>
+				<li>
+					<img src="images/t03_no4.png">
+					<p>カメラおよびマイクを使用し、内容を記録します</p>
+				</li>
+				<li>
+					<img src="images/t03_no5.png">
+					<p>話すときは、面接官の顔に向かって話す</p>
+				</li>
+				<li>
+					<img src="images/t03_no6.png">
+					<p>面接官に対して質問は出来ない</p>
+				</li>
+				<li>
+					<img src="images/t03_no7.png">
+					<p>面接官には絶対に手を触れない</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="T_format">
+			<header class="t_head_title"><p>進行方法</p></header>
+			<div class="t05">
+				<img src="images/t05.png">
+				<div class="tutorial_txt"><p>面接は「私が質問したあとに、あなたが回答する」を繰り返す</p></div>
+			</div>
+			<div class="t06">
+				<img src="images/t06.png">
+				<div class="tutorial_txt"><p>質問のあと、画面が回答モードに変わるため、制限時間内に回答する</p></div>
+			</div>
+			<div class="t07">
+				<img src="images/t07.png">
+				<div class="tutorial_txt"><p>回答した後、私が考えている間はお待ち下さい</p></div>
+			</div>
+			<div class="t08">
+				<img src="images/t08.png">
+				<div class="tutorial_txt"><p>面接終了の案内をするまで、面接を続ける</p></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="interview">
+		<div class="start">
+			<div class="information_area">
+				<dl class="information_txt">
+					<dt>ここから面接がはじまります</dt>
+					<dd>面接の準備ができましたら、<br>｢面接開始｣ボタンをタッチしてください。</dd>
+				</dl>
+			</div>
+			<div class="btn_wite btn1"><p>もう一度聞く</p></div>
+			<div class="btn_color btn2"><p>面接開始</p></div>
+		</div>
+
+		<div class="pause">
+			<div class="pause_area">
+				<div class="contents">
+					<p class="txt">面接を一時中断します。<br>よろしいですか？</p>
+					<ul>
+						<li class="btn_wite btn1"><p>一時中断</p</li>
+						<li class="btn_color btn2"><p>面接を続ける</p></li>
+						<li><p></p></li>
+					</ul>
+				</div>
+			</div>
+			<img src="images/btn_pause.png" class="pause_btn">
+		</div>
+
+		<div class="question">
+			<dl class="interview_txt">
+				<dt>質問</dt>
+				<dd id="setQuestionTxt"></dd>
+			</dl>
+		</div>
+
+		<div class="circle">
+			<img src="images/circle_image.png" class="apng-image" width="516" height="516">
+		</div>
+
+		<div class="speech">
+			<p class="timer">
+				<span id="time" class="timer_time"><img src="images/timer/60.png" name="count"></span>
+			</p>
+			<div class="txt"><p>回答をお話しください</p></div>
+			<div class="btn_wite btn1"><p>もう一度聞く</p></div>
+			<div class="btn_color btn2"><p>回答を終了</p></div>
+		</div>
+
+		<div class="close">
+			<div class="information_area">
+				<dl class="information_txt">
+					<dt>本日の面接は以上で終了です</dt>
+					<dd>「面接終了」をタッチして終了してください。</dd>
+					<dd class="sub">結果は、エントリー企業様へご報告させていただきます。<br>それでは健康管理に気をつけて就職活動をがんばってください。<br>本日はありがとうございました。</dd>
+				</dl>
+			</div>
+			<div class="btn_color btn1"><p>面接終了</p></div>
+		</div>
+
+				<div class="status">
+			<div class="bar"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

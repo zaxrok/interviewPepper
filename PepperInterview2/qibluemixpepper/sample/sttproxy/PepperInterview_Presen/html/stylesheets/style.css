@@ -1,0 +1,649 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+#wrap{
+	font-family: "Noto Sans Japanese";
+	font-weight: 500;
+	width:1707px;
+	height:1067px;
+	background: url(../images/background.png) no-repeat;
+	overflow:hidden;
+	position:relative;
+	opacity:1;
+	text-align: center;
+	color: #ffffff;
+	zoom:0.56;
+}
+
+
+/* common---------------- */
+
+.pause_btn,.btn1,.btn2{
+	opacity: 1;
+}
+
+.btn_color{
+	width: 385px;
+	height: 93px;
+	background: url(../images/btn_color.png) no-repeat;
+	display: table;
+}
+.btn_wite{
+	width: 383px;
+	height: 93px;
+	background: url(../images/btn_wite.png) no-repeat;
+	display: table;
+}
+.btn_nobg{
+	width: 383px;
+	height: 93px;
+	display: table;
+}
+.btn_color p,
+.btn_wite p,
+.btn_nobg p{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 43px;
+	color: rgba(255,255,255,0.50);
+	letter-spacing: 0.17em;
+}
+.center_bottom{
+	position: absolute;
+	top: 885px;
+	left: 673px;
+}
+
+.information_area{
+	width: 1707px;
+	height: 800px;
+	margin-top: 85px;
+	display: table;
+}
+
+.information_txt{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.information_txt dt{
+	font-size: 83px;
+	letter-spacing: 0.03em;
+
+}
+.information_txt dd{
+	font-size: 53px;
+	letter-spacing: 0.03em;
+	line-height: 1.6em;
+}
+
+
+
+/* Welcome--------------- */
+.welcome {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity: 1;
+}
+
+/*Solitary*/
+.solitary {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	opacity: 1;
+}
+.solitary .circle_img{
+	position: absolute;
+	top: 201px;
+	left: 613px;
+}
+.solitary .title{
+	margin-top: 714px;
+}
+
+
+/*QR guide*/
+.qr_guide{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	opacity:0;
+}
+
+.qr_guide img{
+	margin-top: 231px;
+	margin-left: 24px;
+}
+.qr_guide .txt{
+	width: 1707px;
+	height: 364px;
+	display: table;
+}
+.qr_guide .txt p{
+	padding-top: 1em;
+	display:table-cell;
+	vertical-align: middle;
+	font-size: 54px;
+	line-height: 1.34em;
+	letter-spacing: -0.03em;
+}
+
+
+/*QR read*/
+.qr_read{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	opacity:0;
+}
+
+.qr_read img{
+	position: absolute;
+	top: 158px;;
+	left: 584px;
+	z-index: 200;
+}
+
+.qr_read .qr_area{
+	position: absolute;
+	top: 125px;;
+	left: 551px;
+	border-radius: 30px;
+	width: 602px;
+	height: 602px;
+	z-index: 100;
+	overflow:hidden;
+}
+.qr_read .qr_area #camera {
+    position: absolute;
+    left: -180px;
+    top: 0;
+	width: 963px;
+	height: 602px;
+	z-index: 200;
+	background: #EDEDED;
+}
+
+.qr_read .txt{
+	position: absolute;
+	top: 830px;
+	left: 0;
+	width: 1707px;
+	font-size: 77px;
+}
+
+.user_info{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity:0;
+}
+
+.user_info dl{
+	margin-top: 115px;
+	letter-spacing: 0.3em;
+}
+.user_info dl dt{
+	font-size: 40px;
+	color: rgba(255,255,255,0.30);
+	margin-bottom: -17px;
+}
+.user_info dl dd{
+	font-size: 76px;
+	color: rgba(255,255,255,1);
+	margin-bottom: 56px;
+}
+.user_info dl dd small{
+	font-size: 47.5px;
+	margin-right: 0.2em;
+}
+.user_info .btn1{
+	position: absolute;
+	top: 780px;
+	left: 451px;
+}
+.user_info .btn2{
+	position: absolute;
+	top: 780px;
+	left: 874px;
+}
+.user_info footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 1707px;
+	height: 102px;
+	display: table;
+	background: rgba(0,0,0,0.3);
+	border-top: 1.8px solid rgba(255,255,255,1.00);
+}
+.user_info footer p{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 42px;
+	letter-spacing: 0.05em;
+}
+.user_info footer p img{
+	margin: 20px 0.2em 0 0.8em;
+}
+
+/*W-05*/
+.W05{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity:0;
+	display: table;
+}
+.W05 p{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 70px;
+	padding-top: 0.7em;
+	padding-left: 0.3em;
+	letter-spacing: 0.05em;
+}
+
+
+
+/* Tutorial--------------- */
+.tutorial{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity:0;
+}
+
+.tutorial header.t_head_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 104px;
+	display: table;
+	background: rgba(0,0,0,0.3);
+	border-bottom: 1.8px solid rgba(255,255,255,1.00);
+	opacity: 1;
+}
+
+.tutorial header.t_head_title{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 104px;
+	display: table;
+}
+.tutorial header.t_head_title p{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 48px;
+	letter-spacing: 0.05em;
+}
+
+
+
+/*T-02*/
+.T02{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity:0;
+}
+.T02 img{
+	margin-top: 252px;
+}
+.T02 dl{
+	margin-top: 80px;
+	width: 1227px;
+	padding-left: 240px;
+}
+.T02 dl dt{
+	font-size: 51px;
+	letter-spacing: 0.03em;
+	border-bottom: solid #ffffff 1px;
+	padding-bottom: 20px;
+}
+.T02 dl dd{
+	padding-top: 20px;
+	margin-top: 5px;
+	margin-left: 0.4em;
+	font-size: 35px;
+	font-weight: 100;
+	letter-spacing: 0.03em;
+	line-height: 1.55em;
+}
+
+
+/*T-03*/
+.T03{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity:0;
+}
+
+.T03 ul{
+	margin-top: 186px;
+	margin-left: 335px;
+}
+
+.T03 li{
+	position:relative;
+	width: 1085px;
+	height: 97px;
+	margin-bottom: 17px;
+	display: table;
+	background: rgba(255,255,255,0.1);
+	border-radius: 15px;
+	font-size: 38px;
+}
+.T03 li p{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 75px;
+}
+.T03 li img{
+	position:absolute;
+	top: -6px;
+	left:-8px;
+}
+
+
+/*T_format*/
+.T_format{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity:0;
+}
+.tutorial_txt{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 1707px;
+	height: 175px;
+	display: table;
+}
+.tutorial_txt p{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 43px;
+}
+
+
+.T_format .t05{opacity: 1;}
+.T_format .t06{opacity: 0;}
+.T_format .t07{opacity: 0;}
+.T_format .t08{opacity: 0;}
+
+.T_format .t05 img{
+	position: absolute;
+	top: 239px;
+	left: 299px;;
+}
+.T_format .t06 img{
+	position: absolute;
+	top: 176px;
+	left: 169px;;
+}
+.T_format .t07 img{
+	position: absolute;
+	top: 241px;
+	left: 445px;;
+}
+.T_format .t08 img{
+	position: absolute;
+	top: 241px;
+	left: 429px;;
+}
+
+
+/* interview--------------- */
+.interview{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity:1;
+}
+
+/*status bar*/
+.status{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 3999;
+	width: 1707px;
+	height: 20px;
+	background: rgba(0,0,0,0.4);
+	opacity: 0;
+}
+.status .bar{
+	width: 0%;
+	height: 10px;
+	margin-top: 5px;
+	background: url(../images/status_bar.png) no-repeat;
+}
+
+/*layer1*/
+.start{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity: 0;
+}
+.start .information_area dt{
+	margin-bottom: 50px;
+
+}
+.start .btn1{
+	position: absolute;
+	top: 885px;
+	left: 451px;
+}
+.start .btn2{
+	position: absolute;
+	top: 885px;
+	left: 874px;
+}
+
+
+
+/*layer2*/
+.pause{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4000;
+	opacity: 0;
+}
+.pause .pause_btn{
+	position: absolute;
+	top: 36px;
+	left: 1442px;
+	z-index: 4100;
+}
+
+.pause .pause_area{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	z-index: 4200;
+	background: rgba(0,0,0,0.85);
+	opacity: 0;
+	display: table;
+}
+
+.pause .pause_area .contents{
+	display: table-cell;
+	vertical-align: middle;
+}
+.pause .pause_area .contents .txt{
+	font-size: 59px;
+	letter-spacing: 0.05em;
+	margin-left: 1em;
+	padding-top: 65px;
+}
+.pause .pause_area .contents ul{
+	width: 808px;
+	margin: 116px auto 0;
+}
+.pause .pause_area .contents ul .btn1{
+	float: left;
+	margin-right: 40px;
+}
+.pause .pause_area .contents ul .btn3{
+	margin: 40px auto 0;
+}
+
+
+
+
+/*layer3*/
+.question{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	display: table;
+	z-index: 3000;
+	opacity: 0;
+}
+.interview_txt{
+	display: table-cell;
+	vertical-align: middle;
+
+}
+.interview_txt dt{
+	width: 1707px;
+	margin-bottom: 60px;
+	color: rgba(255,255,255,0.50);
+	font-size: 78px;
+	letter-spacing: 0.65em;
+	padding-left: 0.20em;
+
+}
+.interview_txt dd{
+	display: inline-block;
+	text-align: left;
+	font-size: 61px;
+	letter-spacing: 0.05em;
+	margin-bottom: 78px;
+	padding:0 100px;
+}
+
+
+/*layer4*/
+.circle{
+	position: absolute;
+	top: 268px;
+	left: 595px;
+	z-index: 2000;
+	opacity: 0;/*0.15*/
+}
+
+
+/*layer5*/
+.speech{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+}
+
+.speech .txt{
+	width: 1707px;
+	height: 288px;
+	padding-top: 0.1em;
+	letter-spacing: -0.03em;
+	display: table;
+	color: rgba(255,255,255,1);
+	font-size: 54px;
+}
+.speech .txt p{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.speech .btn1{
+	position: absolute;
+	top: 885px;
+	left: 451px;
+}
+.speech .btn2{
+	position: absolute;
+	top: 885px;
+	left: 874px;
+}
+
+
+.timer {
+  position: absolute;
+  top: 56px;
+  left: 45px;
+  width:121px;
+  height:145px;
+}
+
+.timer_time {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+/*layer6*/
+.close{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1707px;
+	height: 1067px;
+	opacity: 0;
+	z-index: 500;
+}
+.close .information_txt dt{
+	margin-bottom: 15px;
+}
+.close .information_txt dd{
+	font-size: 46px;
+}
+.close .information_txt dd.sub{
+	color: rgba(255,255,255,0.3);
+	line-height: 1.5em;
+	margin-top: 75px;
+
+}
+.close .btn1{
+	position: absolute;
+	top: 885px;
+	left: 689px;
+}
